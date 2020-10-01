@@ -1,0 +1,30 @@
+<div class="menu_container">
+    <div class="menu">
+        <a href=""><div class="title_menu">Messaging</div></a>
+        {% if user.is_authenticated %}
+            <input type="text" name="search_user" id="search_user" class="input_menu" placeholder="Search">
+            
+            <a href="" class="friends">
+                <div class="user_pic"><img src="/media/user-default.png" alt=""></div>
+                <div class="last_message">Salut ça va ?</div>
+            </a>
+
+            <a href="" class="friends">
+                <div class="user_pic"><img src="/media/user-default.png" alt=""></div>
+                <div class="last_message">Salut ça va ?</div>
+            </a>
+
+            <a href="" class="friends">
+                <div class="user_pic"><img src="/media/user-default.png" alt=""></div>
+                <div class="last_message">Salut ça va ?</div>
+            </a>
+
+            
+        
+        {% else %}
+            <a href="/user/login"><div class="elt_menu">Login</div></a>
+            <a href="/user/registrer"><div class="elt_menu">Registration</div></a>
+            <a href="/user/logout"><div class="elt_menu">Logout</div></a>
+        {% endif %}
+    </div>
+</div>

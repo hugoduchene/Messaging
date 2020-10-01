@@ -8,6 +8,7 @@ body{
 }
 
 .menu_container{
+    overflow: auto;
     color: white;
     position: fixed;
     background-color: #272727;
@@ -56,12 +57,100 @@ a{
     text-align: center;
 }
 
+input, button{
+    outline: none;
+    border: none;
+}
+
+.input_menu{
+    border-radius: 6px;
+    display: flex;
+    margin: auto;
+    margin-top: 3%!important;
+    padding: 3%;
+    width: 80%;
+}
+
 /* login */
 
-.login{
+.user_container{
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.user{
+    border-radius: 6px;
+    box-shadow: 0 0 6px 0 black;
+    width: 50%;
+    border: 2px solid black;
+    padding-right: 2%;
+    padding-left: 2%;
+    padding-bottom: 15%;
+    padding-top: 5%;
+}
+
+.title_user{
+    margin-top: 10%;
+    font-size: 26px;
+    text-align: center;
+}
+
+.user_form{
+    text-align: center;
+    margin-top: 3%;
+    width: 100%;
+    display: block;
+}
+
+.input_user{
+    width: 80%;
+    border-radius: 6px;
+    margin-top: 3%;
+    padding: 2%;
+}
+
+.button_user{
+    margin-top: 3%;
+    padding: 2%;
+    width: 84%;
+    border-radius: 6px;
+    color: white;
+    background-color: #272727;
+}
+
+.button_user:hover{
+    background-color: white;
+    color: #272727;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+/* message */
+
+.friends{
+    padding-bottom: 1%;
+    font-size: 15px;
+    margin-top: 6%;
+    padding-top: 3%;
+    display: flex;
+    border-bottom: 1px solid #F5F5F5;
+}
+
+.friends:hover{
+    background-color: #F5F5F5;
+    color: #272727;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.user_pic img{
+    width: 80px;
+    height: 55px;
+}
+
+.last_message{
+    display: flex;
+    align-items: center;
+}

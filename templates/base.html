@@ -6,14 +6,7 @@
     
     <div class="flex">
         
-        <div class="menu_container">
-            <div class="menu">
-                <a href=""><div class="title_menu">Messaging</div></a>
-                <a href="/user/login"><div class="elt_menu">Login</div></a>
-                <a href=""><div class="elt_menu">Registration</div></a>
-                <a href=""><div class="elt_menu">Logout</div></a>
-            </div>
-        </div>
+        {% include 'menu.html' %}
 
         <div class="content">{% block content %}{% endblock %}</div>
     </div>

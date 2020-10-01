@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'message',
+    'user',
 ]
 
 MIDDLEWARE = [
@@ -127,3 +130,14 @@ STATICFILES_DIRS = [
 ]
 
 STATIC_URL = '/static/'
+
+# config pictures
+
+MEDIA_ROOT = os.path.join(BASE_DIR, '../pictures_user')
+MEDIA_URL = '/media/'
+
+# config user's model
+
+AUTHENTICATION_BACKENDS = ('django.contrib.auth.backends.ModelBackend',)
+AUTH_USER_MODEL = 'user.CustomUser'
+LOGIN_REDIRECT_URL = 'registrer'

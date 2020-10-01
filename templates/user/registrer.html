@@ -2,13 +2,16 @@
 {% block content %}
 <section class="user_container">
     <div class="user">
-        <div class="title_user">Login</div>
+        <div class="title_user">Registrer</div>
 
         <form action="" method="post" class="user_form">
             {% csrf_token %}
             {{ form.username }}
-            {{ form.password }}
-            <input type="submit" value="Login" class="button_user">
+            {{ form.email }}
+            {{ form.password1 }}
+            {{ form.password2 }}
+            
+            <input type="submit" value="Registrer" class="button_user">
         </form>
 
     </div>
