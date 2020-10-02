@@ -12,3 +12,8 @@ class Message(models.Model):
     )
     id_giving = models.ForeignKey(CustomUser, related_name='message_giving', on_delete=models.CASCADE)
     id_receiving = models.ForeignKey(CustomUser, related_name='message_receiving', on_delete=models.CASCADE)
+
+
+class Conversation(models.Model):
+    id_creator = models.ForeignKey(CustomUser, related_name='conversation_creator', on_delete=models.CASCADE)
+    id_recipient = models.ForeignKey(CustomUser, related_name='conversation_recipient', on_delete=models.CASCADE)
