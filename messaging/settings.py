@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'user',
+    'rest_framework',
+    'api',
 ]
 
 MIDDLEWARE = [
@@ -142,7 +144,7 @@ MEDIA_URL = '/media/'
 
 AUTHENTICATION_BACKENDS = ('django.contrib.auth.backends.ModelBackend',)
 AUTH_USER_MODEL = 'user.CustomUser'
-LOGIN_REDIRECT_URL = 'message'
+LOGIN_REDIRECT_URL = 'messagestart'
 
 # config websockets
 
@@ -155,4 +157,14 @@ CHANNEL_LAYERS = {
             "hosts": [('127.0.0.1', 6379)],
         },
     },
+}
+
+# Settings drf
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.permissions.IsAuthenticated',
+    ],
 }

@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+
+{{ id_user|json_script:"id_user" }}
+<div class="hidden" id="user_conv">{{ infos_user.id }}</div>
+
+{% endblock %}

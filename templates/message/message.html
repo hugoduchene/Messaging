@@ -4,10 +4,15 @@
 
 {{ id_conversation|json_script:"id_conversation" }}
 {{ id_user|json_script:"id_user" }}
+<div class="hidden" id="user_conv">{{ infos_user.id }}</div>
 
-<script src="{% static 'js/message.js' %}" defer></script>
+<script type="module" src="{% static 'js/message.js' %}" defer></script>
 
 <section class="box_message">
+    <div class="infos_user">
+        <div class="pic_message_user"><img src="/media/{{ infos_user.image_profile }}" alt="pic_user"></div>
+        <div class="title_message_user">{{ infos_user.username }}</div>
+    </div>
 
     <div class="container_message">
         <div class="content_message">

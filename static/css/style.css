@@ -30,6 +30,10 @@ body{
     text-decoration: none;
 }
 
+.hidden{
+    display: none;
+}
+
 /* Menu */
 
 .elt_menu{
@@ -130,6 +134,12 @@ input, button{
 
 /* message */
 
+.title_name{
+    font-weight: bolder;
+    font-style: italic;
+    text-align: center;
+}
+
 .friends{
     padding-bottom: 1%;
     font-size: 15px;
@@ -144,14 +154,22 @@ input, button{
     color: #272727;
     border-radius: 6px;
     transition: 0.3s;
+    cursor: pointer;
 }
 
 .user_pic img{
-    width: 80px;
-    height: 55px;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    margin-right: 10px;
 }
 
 .last_message{
+    flex-direction: column;
+    display: flex;
+}
+
+.container_last{
     display: flex;
     align-items: center;
 }
@@ -159,18 +177,20 @@ input, button{
 /* box_message */
 
 .box_message{
-    position: relative;
+    display: flex;
+    flex-direction: column;
     height: 100vh;
     width: 100%;
 }
 
 .form_message{
+    flex-grow: 1;
     height: 5vh;
     justify-content: center;
     bottom: 0;
     position: absolute;
     display: flex;
-    width: 100%;
+    width: 80%;
     background-color: #272727;
     padding-top: 1vh;
     padding-bottom: 1vh;
@@ -198,8 +218,10 @@ input, button{
 }
 
 .container_message{
-    height: 93vh;
+    margin-top: 10vh;
+    height: 83vh;
     overflow-y: scroll;
+    scroll-behavior: smooth;
 }
 
 .content_message{
@@ -228,3 +250,51 @@ input, button{
     border-radius: 6px;
     margin-bottom: 1%;
 }
+
+.infos_user{
+    display: flex;
+    align-items: center;
+    z-index: 5;
+    position: fixed;
+    height: 10vh;
+    width: 100%;
+    border-bottom: 1px solid black;
+    background-color: #272727;
+    color: #F5F5F5;
+    align-items: center;
+    padding-left: 1%;
+    padding-top: 0.2%;
+}
+
+.infos_user img{
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+}
+
+.pic_message_user{
+    margin-right: 1%;
+}
+
+/* loader */
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+  }
+  
+  /* Safari */
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
